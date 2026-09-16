@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Elms Sans", ui-sans-serif, system-ui;
+  --font-serif: "Libre Baskerville", serif;
+  --font-mono: "Atkinson Hyperlegible Mono", monospace;
+  --font-display: "Elms Sans", cursive;
+}
+
+@layer base {
+  body {
+    @apply font-sans; /* applies Elms Sans by default */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  code, pre {
+    @apply font-mono;
+  }
+}
+
+
+/* 
+@tailwind "base";
+@tailwind components;
+@tailwind utilities; */
+
+@layer utilities {
+  @keyframes float {
+    0%   { transform: translate(0, 0); }
+    50%  { transform: translate(20px, -30px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+}
+
+
+/* 
+  body {
+    background-image: url('/heartbeat50.png');
+    background-size: 60vh;        
+    background-repeat: no-repeat;  
+    background-position: center;   
+  } */
+
+
+  
